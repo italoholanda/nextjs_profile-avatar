@@ -19,6 +19,7 @@ const GlobalStyles = createGlobalStyle`
     --grey-lighten: #404040;
     --grey-light: #D9D9D9;
     --grey-medium: #1A1A1A;
+    --grey-darkest-alpha: rgba(17, 17, 17, .8);
   }
 
   html, body, #__next {
