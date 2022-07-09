@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { typoSystem } from 'styles/global'
 
 export const Wrapper = styled.button`
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 1rem;
   background: var(--primary-cyan);
   border-radius: 0.3rem;
   border-color: transparent;
@@ -17,5 +17,11 @@ export const Wrapper = styled.button`
 
   &:hover {
     background: var(--white);
+  }
+
+  &:disabled {
+    filter: opacity(0.5);
+    color: var(--black);
+    cursor: not-allowed;
   }
 `
