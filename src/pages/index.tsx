@@ -1,7 +1,11 @@
+import Header from 'components/Header'
+import { ContainerSmall } from 'styles/container'
+
 export default function Home() {
   return (
     <>
-      <p>TESTE</p>
+      <Header />
+      <ContainerSmall></ContainerSmall>
     </>
   )
 }
