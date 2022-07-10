@@ -11,7 +11,7 @@ import Button from 'components/Button'
 import Input from 'components/Input'
 
 export default function Home() {
-  const [photoModal, setPhotoModal] = useState(true)
+  const [photoModal, setPhotoModal] = useState(false)
   const onCloseModal = () => setPhotoModal(false)
   const onOpenModal = () => setPhotoModal(true)
 
@@ -23,7 +23,9 @@ export default function Home() {
 
         <S.SmallContainer>
           <S.Avatar onClick={onOpenModal}>
-            <S.Photo />
+            <S.PhotoContainer>
+              <S.Photo pxSize={128} />
+            </S.PhotoContainer>
             <span>Hi, John Doe!</span>
           </S.Avatar>
 
