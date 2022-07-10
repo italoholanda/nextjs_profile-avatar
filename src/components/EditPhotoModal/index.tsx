@@ -8,6 +8,7 @@ import imageCompressor from 'util/imageCompressor'
 
 import * as S from './styles'
 import LoadingText from 'components/LoadingText'
+import useAuth from 'hooks/useAuth'
 
 interface Props {
   onClose: () => void
@@ -17,6 +18,8 @@ const EditPhotoModal = ({ onClose }: Props) => {
   const [uploadedPhoto, setUploadedPhoto] = useState<File>()
   const [croppedImage, setCroppedImage] = useState<string>()
   const [isLoading, setIsLoading] = useState(false)
+
+  const { setAvatar } = useAuth()
 
   async function handleUpload(event: React.ChangeEvent<HTMLInputElement>) {
     if (!event.target.files) return
@@ -38,9 +41,9 @@ const EditPhotoModal = ({ onClose }: Props) => {
   async function handleCrop() {
     try {
       setIsLoading(true)
-      alert('Imagem atualizada')
       setIsLoading(false)
-      console.log(croppedImage)
+      setAvatar(croppedImage)
+      alert('Imagem atualizada')
       onClose()
     } catch (err) {
       console.error(err)
