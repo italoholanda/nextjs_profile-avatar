@@ -22,8 +22,8 @@ export default function Home() {
         <h1>PROFILE</h1>
 
         <S.SmallContainer>
-          <S.Avatar onClick={onOpenModal}>
-            <S.PhotoContainer>
+          <S.Avatar>
+            <S.PhotoContainer onClick={onOpenModal}>
               <S.Photo pxSize={128} />
             </S.PhotoContainer>
             <span>Hi, John Doe!</span>

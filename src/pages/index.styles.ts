@@ -23,6 +23,8 @@ export const PhotoContainer = styled.div`
   transition: all 0.5s;
   border-radius: 50%;
 
+  max-width: fit-content;
+
   display: flex;
   align-items: center;
   justify-content: center;
