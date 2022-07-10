@@ -39,8 +39,15 @@ export default function Home() {
               label="Email"
             />
           </FormBox>
+
           <div>
-            <Button>Save info</Button>
+            <Button
+              onClick={() =>
+                alert('This form is just an example. Nothing changed 🙂')
+              }
+            >
+              Save info
+            </Button>
           </div>
         </S.SmallContainer>
 
