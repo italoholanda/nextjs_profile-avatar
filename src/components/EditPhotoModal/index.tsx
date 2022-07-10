@@ -7,6 +7,7 @@ import React, { useState } from 'react'
 import imageCompressor from 'util/imageCompressor'
 
 import * as S from './styles'
+import LoadingText from 'components/LoadingText'
 
 interface Props {
   onClose: () => void
@@ -52,7 +53,9 @@ const EditPhotoModal = ({ onClose }: Props) => {
   if (isLoading)
     return (
       <Modal onClose={onClose} title="Upload a new photo">
-        <S.Wrapper>Carregando...</S.Wrapper>
+        <S.Loading>
+          <LoadingText />
+        </S.Loading>
       </Modal>
     )
 

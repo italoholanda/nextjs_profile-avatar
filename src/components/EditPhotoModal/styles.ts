@@ -45,3 +45,9 @@ export const SelectAnotherImg = styled.span`
     text-decoration: underline;
   }
 `
+
+export const Loading = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
