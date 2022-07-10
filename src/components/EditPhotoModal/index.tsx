@@ -43,11 +43,11 @@ const EditPhotoModal = ({ onClose }: Props) => {
       setIsLoading(true)
       setIsLoading(false)
       setAvatar(croppedImage)
-      alert('Imagem atualizada')
+      alert('Image updated successfully')
       onClose()
     } catch (err) {
       console.error(err)
-      alert('Erro ao atualizar imagem no servidor')
+      alert('Error while updating photo')
       setIsLoading(false)
       onClose()
     }
