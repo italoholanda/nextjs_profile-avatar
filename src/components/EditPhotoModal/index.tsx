@@ -41,7 +41,6 @@ const EditPhotoModal = ({ onClose }: Props) => {
   async function handleCrop() {
     try {
       setIsLoading(true)
-      setIsLoading(false)
       setAvatar(croppedImage)
       alert('Image updated successfully')
       onClose()
