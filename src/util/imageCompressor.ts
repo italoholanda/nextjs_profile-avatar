@@ -6,16 +6,14 @@ function isCompressed(imageFile: File, maxSizeMB: number) {
   return imageFile.size <= ONE_MEGABYTE * maxSizeMB
 }
 
-export default async function imageCompressor(
-  imageFile: File,
-  maxSizeMB = 1.5
-) {
+export default async function imageCompressor(imageFile: File, maxSizeMB = 2) {
   const controller = new AbortController()
 
   if (isCompressed(imageFile, maxSizeMB)) return imageFile
 
   const options = {
     maxSizeMB: maxSizeMB,
+    maxWidthOrHeight: 1080,
     signal: controller.signal
   }
 
