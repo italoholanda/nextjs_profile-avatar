@@ -1,3 +1,11 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.main``
+export const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    border-radius: 50%;
+  }
+`
